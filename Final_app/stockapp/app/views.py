@@ -29,4 +29,4 @@ def predict(request):
     test_data = [[Symbol, Open, High, Low, Volume]]
     y_pred = model.predict(test_data)
 
-    return render(request, 'prediction.html' ,{'pred': y_pred})
+    return render(request, 'prediction.html' ,{'pred': int(y_pred[0])})
